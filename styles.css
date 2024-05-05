@@ -1,0 +1,372 @@
+:root {
+    --light:white;
+    --lightfont:#17292b;
+    --light2:#F6F5F2;
+}
+:root.theme-dark {
+    --light: #17292b;
+    --lightfont: #ffffff;
+    --light2: #1B4242;
+}
+
+
+html {
+    scroll-behavior: smooth;
+  }
+body{
+    background-color: var(--light);   
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+    font-style: normal; 
+    margin: 10px 0 0 0;
+    color: var(--lightfont);
+    
+}
+
+/* ==================NAVBAR================= */
+
+#navbar {
+    display: flex;
+    justify-content: center; 
+
+}
+
+
+
+#navContainer {
+    background-color: var(--light); 
+    position: fixed;
+    width: 100%; /* Set width to 100% */
+    max-width: 1000px;
+    height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;   
+    border-radius: 10px;
+    padding: 0 10px;
+    z-index: 1000;
+    transition: backdrop-filter 0.3s ease;
+    
+    
+}
+
+
+.navlink {
+    margin-right: 10px;
+    text-decoration: none;
+    color: var(--lightfont);
+    transition: all 0.2s ease-in-out;
+    font-size: 15px;
+}
+
+.navlink:hover {
+    
+    background-position: 0;
+    text-decoration: underline;
+    
+}
+.navlink:hover::before {
+    width:100%;
+}
+#navList{
+    display: flex;
+}
+#navList p{
+    margin: 0 10px 0 10px;
+    cursor: pointer;
+
+}
+
+
+
+/* ==================HOME================= */
+#home{
+    display: flex;
+    justify-content: center;
+    width: auto;
+    margin-bottom: 100px;
+}
+
+#homecontainer{
+    width: 100%;
+    max-width: 1000px;
+    margin-top: 80px;
+    /* border: 1px solid; */
+    height: 600px;
+    /* background-color: grey; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#profileImage{
+    width: 400px;
+    border-radius: 50%;
+    margin: 20px;
+    border: 5px solid white;
+    box-shadow: 4px 4px 8px #17292b;
+    transition: 0.5s ease-in-out;
+    
+}
+#profileImage:hover{
+    width: 410px;
+    box-shadow: -4px -4px 8px #17292b;
+
+}
+
+.greet {
+    font-size: 60px;
+    line-height: 0px;
+}
+#downloadCV{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid var(--lightfont);
+    height: 30px;
+    padding: 10px;
+    width: 150px;
+    border-radius: 10px;
+    cursor: pointer; 
+}
+#downloadCV:hover{
+    background-color: var(--light2);
+}
+
+
+#downloadCV a{
+    text-decoration: none;
+    color: var(--lightfont);
+}
+
+
+
+
+#cvimage{
+    width: 20px;
+    
+}
+
+#socialbtnContainer{
+    display: flex;
+}
+
+.socialbtns{
+    margin-top: 30px;
+    margin-right: 20px;
+    width: 30px;
+    
+    
+}
+.fa-color{
+    color: var(--lightfont);
+}
+
+
+/* ==================ABOUT================= */
+#about{
+    background-color: var(--light2);
+    height: 100vh;
+    padding: 10px 200px 0 200px;
+}
+
+.fa-about{
+    color: var(--lightfont);
+}
+
+#aboutContainerBox{
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    /* background-color: grey; */
+    flex-direction: column;
+}
+.containerHeading{
+    font-weight: 500;
+    font-size: 50px;
+}
+#aboutContainer{
+   
+    /* border: 1px solid black; */
+    display: flex;
+    
+}
+#aboutImage{
+    width:350px;
+    border: 5px solid white;
+    box-shadow: 4px 4px 8px #17292b;
+    transition: 0.5s ease;
+    margin-right: 50px;
+    visibility: hidden;
+   
+}
+
+#aboutImage.reveal{
+    visibility: visible;
+    opacity: 1;
+}
+
+#aboutImage:hover{
+    transform: translateY(-20px);
+}
+
+
+
+
+
+.animate-translate {
+    animation: animate-translate 1s ease ;
+}
+
+@keyframes animate-translate {
+    0% {
+        transform: translateY(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+
+
+
+#expAndEdu{
+    display: flex;
+    padding-top: 20px;
+}
+.expBox{
+    border: 1px solid;
+    margin: 20px;
+    padding: 30px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 0px;
+    width: 300px;
+    height: 120px;
+    overflow: hidden;
+    transition: 0.5s ease;
+    
+}
+.expBox:hover{
+    transform: translateY(-20px);
+    background-color: var(--light);
+    
+}
+
+
+.subHeading{
+    font-size: 30px;
+}
+.abouticons{
+    width: 30px;
+    color: white;
+    
+}
+#abouttext{
+    margin: 20px;
+    border: none;
+}
+
+
+
+
+/* ==================SKILLS================= */
+
+
+#skillContainerBox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+}
+.skillContainer{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.skillbox{
+    border: 1px solid;
+    margin: 30px;
+    width: 400px;
+    border-radius: 20px;
+    padding: 10px 0 50px 0;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    visibility: hidden;
+}
+#skillbox.reveal {
+    visibility: visible;
+    opacity: 1;
+}
+
+.skillbox:hover{
+    background-color: var(--light2);
+}
+.skillboxlist{
+    display: grid;
+    grid-template-columns: auto auto;   
+    margin-right: 40px;
+}
+.skillboxlist li{
+    margin: 0 20px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.5s ease-in-out;
+}
+.skillboxlist li:hover{
+    animation: rotate 0.3s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.skillicons{
+    width: 80px;
+}
+
+.animate-translateL{
+    animation: animate-translateL 2s ease ;
+}
+.animate-translateR{
+    animation: animate-translateR 2s ease ;
+}
+
+@keyframes animate-translateL {
+    0% {
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes animate-translateR {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
