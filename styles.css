@@ -346,7 +346,7 @@ body {
 
 /* ========================================MEDIA QUERY MAX WIDTH 430PX==================================== */
 
-@media only screen and (max-width: 430px) {
+@media only screen and (max-width: 480px) {
     /* ====================NAVBAR====================== */
 
     #navbar {
