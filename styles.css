@@ -391,11 +391,14 @@ body {
         height: 90vh;
         flex-direction: column;
         visibility: visible;
+        padding-top: 30px;
     }
 
     #profileImage {
-        width: 300px;
+        width: 250px;
     }
+
+
     #profileImage:hover {
         width: 310px;
         box-shadow: -4px -4px 8px #17292b;
@@ -425,7 +428,7 @@ body {
     /* =====================ABOUT====================== */
 
     #about {
-        height: 170vh;
+        height: 190vh;
         padding: 0;
     }
 
@@ -434,6 +437,7 @@ body {
         justify-content: center;
         align-items: center;
         flex-direction: column;
+       
     }
     .containerHeading {
         font-weight: 500;
@@ -455,6 +459,11 @@ body {
         visibility: visible;
         margin: auto;
     }
+
+    #aboutImage:hover {
+        transform: none;
+    }
+
     #expAndEdu {
         display: flex;
         flex-direction: column;
@@ -470,6 +479,11 @@ body {
         margin: auto;
         margin-bottom: 20px;
     }
+
+    .expBox:hover {
+        transform: none;
+    }
+
 
     /* ==================SKILLS================= */
 

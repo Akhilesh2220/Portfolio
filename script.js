@@ -57,10 +57,10 @@ function handleScrollRevealAbout(){
 }
 
 // Add scroll event listener
-window.addEventListener('scroll', handleScrollRevealAbout);
+
 
 // Initial check on page load
-handleScrollRevealAbout();
+
 
 
 // ========================SCROLL_FROM_LEFT_ANIMATION==============================
@@ -69,7 +69,7 @@ handleScrollRevealAbout();
 const scrollFromLeft = document.querySelector('.scrollTransitionL');
 
 function handleScrollRevealL() {
-    console.log("iii",scrollFromLeft);
+
     if (isInViewport(scrollFromLeft)) {
         scrollFromLeft.classList.add('animate-translateL');
         scrollFromLeft.style.visibility = 'visible';
@@ -80,10 +80,10 @@ function handleScrollRevealL() {
     }
 }
 // Add scroll event listener
-window.addEventListener('scroll', handleScrollRevealL);
+
 
 // Initial check on page load
-handleScrollRevealL();
+
 
 
 // ========================SCROLL_FROM_RIGHT_ANIMATION==============================
@@ -102,9 +102,28 @@ function handleScrollRevealR() {
     }
 }
 // Add scroll event listener
-window.addEventListener('scroll', handleScrollRevealR);
+
 
 // Initial check on page load
-handleScrollRevealR();
 
 
+
+// =====================CHECK SCREEN WIDTH =========================
+
+function checkScreenWidth() {
+    if (window.innerWidth > 500) {
+        console.log(window.innerWidth);
+        window.addEventListener('scroll', handleScrollRevealL);
+        window.addEventListener('scroll', handleScrollRevealR);
+        window.addEventListener('scroll', handleScrollRevealAbout);
+        handleScrollRevealAbout();
+        handleScrollRevealL();
+        handleScrollRevealR();
+    }
+}
+
+// Call the checkScreenWidth function when the window is resized
+window.addEventListener('resize', checkScreenWidth);
+
+// Call checkScreenWidth initially to handle the case when the page loads already wider than 480px
+checkScreenWidth();
